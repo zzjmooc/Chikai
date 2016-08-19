@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About us</title>
+    <link rel="stylesheet" href="Css/Page_1.css">
+    <script src="Js/Page_1.js" type="text/javascript"></script>
+    <script src="Js/Page_3.js" type="text/javascript"></script>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        var mt = 0;
+        window.onload = function () {
+            var mydiv = document.getElementById("topBar");
+            var mt = mydiv.offsetTop;
+            window.onscroll = function () {
+                var t = document.documentElement.scrollTop || document.body.scrollTop;
+                if (t > mt) {
+                    mydiv.style.position = "fixed";
+                    mydiv.style.left = "76px";
+                    mydiv.style.top = "0";
+                }
+                else {
+                    mydiv.style.margin="0 auto"
+                    mydiv.style.position = "static";
+                }
+            }
+            var oImg = document.getElementById("aProduct").getElementsByTagName("img");
+            for (var i = 0; i <= oImg.length; i++) {
+                if(i<3) {
+                    oImg[i].onmouseover = function () {
+                        var img = new Image();
+                        img.src = oImg[2].src = this.src.replace(/big/, "small");
+                    }
+                }
+                else if(i<6){
+                    oImg[i].onmouseover = function () {
+                        var img = new Image();
+                        img.src = oImg[5].src = this.src.replace(/big/, "small");
+                    }
+                }
+                else if(i<9){
+                    oImg[i].onmouseover = function () {
+                        var img = new Image();
+                        img.src = oImg[8].src = this.src.replace(/big/, "small");
+                    }
+                }
+                else if(i<12){
+                    oImg[i].onmouseover = function () {
+                        var img = new Image();
+                        img.src = oImg[11].src = this.src.replace(/big/, "small");
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        //子导航定位
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var items = $("#aProduct").find(".item");
+                var menu = $("#tShow1");
+                var top = $(document).scrollTop();
+                var currentId = ""; //滚动条现在所在位置的item id
+                items.each(function () {
+                    var m = $(this);
+                    //注意：m.offset().top代表每一个item的顶部位置
+                    if (top > m.offset().top - 300) {
+                        currentId = "#" + m.attr("id");
+                    } else {
+                        return false;
+                    }
+                });
+
+
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="Head">
+    <div id="Head_1">
+        <img src="img/Head_1-1.png">
+    </div>
+    <div id="Head_2">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li onmouseover="aShow(this)" onmouseout="aHide(this)"><a href="Page_3.html">产品</a>
+                <ul>
+                    <li><a href="Page_3.html">智能门锁</a></li>
+                    <li><a href="Page_3.html">智能门禁</a></li>
+                </ul>
+            </li>
+            <li onmouseover="aShow(this)" onmouseout="aHide(this)"><a href="Page_4.html">智慧方案</a>
+                <ul>
+                    <li><a href="Page_4.html">智慧工程</a></li>
+                    <li><a href="Page_4_text1.html">智慧城市</a></li>
+                    <li><a href="Page_4_text2.html">智慧社区</a></li>
+                    <li><a href="Page_4_text3.html">智慧办公</a></li>
+                </ul>
+            </li>
+            <li><a href="Page_5.html">APP下载</a></li>
+            <li onmouseover="aShow(this)" onmouseout="aHide(this)"><a href="Page_2.html">关于我们</a>
+                <ul>
+                    <li><a href="Page_2.html">公司概况</a></li>
+                    <li><a href="text_1.html">公司荣誉</a></li>
+                    <li><a href="text2.html">子公司</a></li>
+                    <li><a href="text-3.html">合作伙伴</a></li>
+                    <li><a href="text_4.html ">联系我们</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="aBar">
+
+
+    <div id="topBar">
+          <div class="topBar_1 fl">
+              <ul>
+             <li  onmouseover="tShow1(this)" onmouseout="tHide1(this)"><a href="#">产品分类</a>
+                 <ul id="tShow1" >
+                     <li onmouseover="tShow2(this)" onmouseout="tHide2(this)"><a href="#" >智能门锁</a>
+                          <ul id="tShow2">
+                              <li><a href="#item1">Fk-600</a></li>
+                              <li><a href="#item2">FG-853</a></li>
+                              <li><a href="#item3">Ft_42</a></li>
+                          </ul>
+                     </li>
+                     <li><a href="#item4">智能门禁</a></li>
+                 </ul>
+             </li>
+                  </ul>
+          </div>
+          <div class="topBar_2 fr">
+              <a href="Page_3.html"><img src="img/myTool.png"></a>
+          </div>
+     </div>
+     <div id="aProduct">
+         <div class="Hr"  id="item1">
+             <table>
+             <tr id="box1">
+                 <td>
+                     <ul>
+                         <li><a href="javascript:;"><img src="img/small_1.png"></a></li>
+                         <li><a href="javascript:;"><img src="img/small_2.png"></a></li>
+                     </ul>
+                 </td>
+                 <td class="oDiv"><a><img src="img/big_1.png"></a></td>
+                 <td class="Span"><h1>智能门锁 | F-K835</h1>
+                    <p class="i">多方式开锁功能：手机蓝牙开锁、密码开锁、蓝牙钥匙开始、机械钥匙开锁。精致钢铸锁头，安全坚固</p>
+                     <p>远程虚拟钥匙授权开门，避免亲朋好友拒之门外的尴尬,可授权开锁的时间段、可分享一次性开锁密码<br></p>
+                     <p class="i">门锁上提反锁，方便快捷<br></p>
+                     <p>产品有12形锁体和13形锁体两款电子锁体选择搭配，采用军工跳频加密技术防卡阻，防外力破坏，防撬<br></p>
+                     <p class="i">远程危险报警功能，出门在外，无家庭安全后顾之忧<br></p>
+                 </td>
+             </tr>
+                 </table>
+         </div>
+         <div class="Hr"  id="item2">
+         <table>
+             <tr id="box2">
+                 <td>
+                     <ul>
+                         <li><a href="javascript:;"><img src="img/sSmall_1.png"></a></li>
+                         <li><a href="javascript:;"><img src="img/sSmall_2.png"></a></li>
+                     </ul>
+                 </td>
+                 <td class="oDiv"><a><img src="img/sBig_1.png"></a></td>
+                 <td class="Span"><h1>智能门锁 | FK-600</h1>
+                         <p class="i">手机蓝牙开锁、机械钥匙开锁、键盘密码开锁、蓝牙钥匙开锁，可授权开锁的时间段、可分享一次性开锁密码<br></p>
+                         <p>软件：支持APP查看授权记录、开锁记录、电池电量,对门锁进行分组管理
+                         硬件：支持APP系统软件升级和门锁固件升级<br></p>
+                         <p class="i">高强度锌合金一次性精铸而成，银边勾勒使棱角更加分明，中式简约风彰显刚硬本色<br></p>
+                 </td>
+             </tr>
+         </table>
+         </div>
+         <div class="Hr"  id="item3">
+         <table>
+             <tr id="box3">
+                 <td>
+                     <ul>
+                         <li><a href="javascript:;"><img src="img/aSmall_2.png"></a></li>
+                         <li><a href="javascript:;"><img src="img/aSmall_1.png"></a></li>
+                     </ul>
+                 </td>
+                 <td class="oDiv"><a><img src="img/aBig_1.png"></a></td>
+                 <td class="Span"><h1>智能门锁 | FG-600</h1>
+                         <p class="i">支持多种开锁方式：机械开锁、触摸键盘密码开锁、蓝牙钥匙挂件开锁、APP远程授权开锁<br></p>
+                         <p>支持APP查看授权记录、开锁记录、电池电量,对门锁进行分组管理<br></p>
+                         <p class="i">精心设计的风尚造型，将你对美学的非凡见地，演绎 为每一次人性化细节质感，让您尽享优越舒适生活<br></p>
+                     </p>
+                 </td>
+             </tr>
+         </table>
+         </div>
+         <div class="Hr"  id="item4">
+         <table>
+             <tr id="box4">
+                 <td>
+                     <ul>
+                         <li><a href="javascript:;"><img src="img/bSmall_1.png"></a></li>
+                         <li><a href="javascript:;"><img src="img/bSmall_2.png"></a></li>
+                     </ul>
+                 </td>
+                 <td class="oDiv"><a><img src="img/bBig_1.png"></a></td>
+                 <td class="Span"><h1>智能门禁</h1>
+                     <p class="i">统一授权，门禁负责人通过云平台对经常通过门禁的人员，进行统一授权管理，只有授权的的人才能通过我们门禁<br></p>
+                     <p>临时授权，通过物业管理云平台针对客户临时授权管理，被授权的用户将收到一把时间段授权的钥匙，可通过手机App打开对应门禁；授权时间结束后，虚拟钥匙自动作废<br></p>
+                     <p class="i">外锁：允许密码、手机App解锁。内锁：只需手指轻轻一点，轻松打开<br></p>
+                 </td>
+             </tr>
+         </table>
+         </div>
+     </div>
+</div>
+<div id="cFoot">
+    <table id="aTable">
+        <tr>
+            <td style="padding-bottom: 20px; font-family:Braggadocio;"><a href="Page_3.html">Product</a></td>
+            <td style="padding-bottom: 20px; font-family:Braggadocio"><a href="Page_4.html">Wisdom plan</a></td>
+            <td style="padding-bottom: 20px; font-family:Braggadocio"><a href="#">About us</a></td>
+        </tr>
+        <tr>
+            <td><a href="Page_3.html">智能门锁</a></td>
+            <td><a href="Page_4.html">智慧工程</a></td>
+            <td><a href="Page_2.html">公司概况</a></td>
+        </tr>
+        <tr>
+            <td><a href="Page_3.html">智能门禁</a></td>
+            <td><a href="Page_4_text1.html">智慧城市</a></td>
+            <td><a href="text_1.html">公司荣誉</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="Page_4_text2.html">智慧社区</a></td>
+            <td><a href="text2.html">子公司</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="Page_4_text3.html">智慧办公</a></td>
+            <td><a href="text-3.html">合作伙伴</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><a href="text_4.html">联系我们</a></td>
+        </tr>
+    </table>
+    <div id="aFoot_1">
+        <p style="font-size: 4px">版权所有：Copyright© 2016,ChiKai Technology Co,.Ltd.驰凯（秦皇岛）有限公司</p>
+    </div>
+</div>
+</body>
+</html>

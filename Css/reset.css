@@ -1,0 +1,16 @@
+/*重置样式*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+input,select, textarea,button{outline: none; border: none;background: none}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}

@@ -1,0 +1,131 @@
+/*头部*/
+.Plan_head{
+    position: relative;
+    top: 53px;
+}
+.Plan_con{
+    position: relative;
+    width: 1360px;
+    height: 700px;
+    margin: 0 auto;
+    top: 140px;
+    text-align: center;
+}
+.Plan_con h1{
+    padding: 17px;
+    width: 140px;
+    margin: 0 auto;
+    border-bottom: 3px solid #059276;
+}
+.Plan_con h3{
+    padding: 22px;
+    padding-bottom: 43px;
+}
+
+.Plan_con ul{
+    position: relative;
+    left: 260px;
+}
+.Plan_con li{
+    float: left;
+
+}
+.Plan_con a{
+    display: block;
+    padding: 10px 52px;
+    margin: 0 10px;
+}
+.Plan_con a:hover{
+    border-bottom: 2px solid #059276;
+}
+.Plan_con .active{
+    border-bottom: 2px solid #059276;
+}
+.Plan_con .Plan_item{
+    padding-bottom: 33px;
+}
+.Plan_con .Plan_img{
+    padding: 10px 0;
+    margin: 50px 0;
+    background-color: #ddd;
+}
+.Plan_con .Plan_img h2{
+    color: #059276;
+    margin-bottom:36px ;
+    margin-top: 11px;
+}
+.Plan_con .Plan_text h2{
+    color: #059276;
+    padding: 22px 0;
+}
+.Plan_con .Plan_text{
+    width: 800px;
+    margin: 0 auto;
+}
+.Plan_con .Plan_text p{
+    font-size: 16px;
+    font-family: "Adobe Fan Heiti Std B";
+    line-height: 25px;
+    text-align:left;
+}
+.Plan_con .Plan_text1{
+    width: 1360px;
+    margin: 0 auto;
+}
+.Plan_text1 img{
+    padding: 20px 0;
+}
+.bgImg{
+    position: absolute;
+    top: 53px;
+}
+/*App下载*/
+.App1{
+    width: 600px;
+    height: 340px;
+    background-color: #059276;
+    position: absolute;
+    top: 120px;
+    left: 600px;
+    opacity: 0.4;
+}
+.App{
+    width: 600px;
+    height: 340px;
+    background-color: #059276;
+    position: absolute;
+    top: 120px;
+    left: 600px;
+    border: 2px solid #fff;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.App h1{
+    opacity: 1;
+    padding: 20px;
+    background-color: #111;
+    color: #ffffff;
+    width: 180px;
+    height: 34px;
+    position: relative;
+    left: 62px;
+    top: 52px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.AppButton .img1{
+    position: relative;
+    left: 209px;
+    top: -5px;
+}
+.AppButton .img2{
+    position: absolute;
+    left: 339px;
+    top:85px;
+    width: 120px;
+    height: 120px;
+    padding-left: 49px;
+    border-left: 1px solid #fff;
+}
